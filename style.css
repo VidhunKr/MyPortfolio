@@ -364,6 +364,7 @@ nav .fa-solid{
         display: block;
         font-size: 25px;
     }nav ul{
+        
         background: #0220ff8f;
         position: fixed;
         top: 0;
@@ -403,5 +404,5 @@ nav .fa-solid{
     }
 }
 #msg{
-    color: rgba(52, 255, 1, 0.59);
+    color: rgba(22, 255, 1, 0.873);
 }
