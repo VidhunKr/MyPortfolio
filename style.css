@@ -350,8 +350,35 @@ form input,form textarea{
     font-weight: 300;
     margin-top: 20px;
 }
-/* -------Small screen----------- */
+#progress{
+    /* background-color:rgba(58, 43, 224, 0.428); */
+    position:fixed;
+    bottom: 80px;
+    right: 20px;
+    height: 50px;
+    width: 50px;
+    display: none;
+    place-items: center;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+#progress-value{
+    display: block;
+    height: calc(100% - 15px);
+    width: calc(100% - 15px);
+    background-color: #00d9ff;
+    border-radius: 50px;
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+    color: #f6f6f8;
+}
 
+/* -------Small screen----------- */
+.gotop{
+    display: none;
+}
 nav .fa-solid{
     display: none;
 

@@ -1,3 +1,5 @@
+
+// --------TabLinks-------
 let tablinks=document.getElementsByClassName("tab-links")
 let tabcontents=document.getElementsByClassName("tab-contents")
 function opentab(tabname){
@@ -11,6 +13,7 @@ function opentab(tabname){
     document.getElementById(tabname).classList.add("active-tab")
 }
 
+// ------SideMenu------
 
 let sidemenu=document.getElementById("sidemenu")
 function openmenu(){
@@ -19,7 +22,7 @@ function openmenu(){
 function closemenu(){
     sidemenu.style.right="-200px";
 }
-
+// -------GoogleSheet---------
   const scriptURL = 'https://script.google.com/macros/s/AKfycbyDhcuQdjCGQnarOVDYO_uyon7NZ5tzjq5fC4SLWWT1V-uk6UJpvk8uVOltnsCwlRh1/exec'
   const form = document.forms['submit-to-google-sheet']
   const msg=document.getElementById("msg")
@@ -37,3 +40,24 @@ function closemenu(){
       )    
       .catch(error => console.error('Error!', error.message))
   })
+
+//   --------TopButton-----
+let calcScrollValue = ()=>{
+    let scrollprogress=document.getElementById("progress")
+    let progressValue= document.getElementById("progress-value")
+    let pos = document.documentElement.scrollTop
+    let calcHeight=document.documentElement.scrollHeight -
+    document.documentElement.clientHeight
+    let scrollValue= Math.round((pos *100)/ calcHeight)
+    if(pos>100){
+        scrollprogress.style.display="grid"
+    }else{
+        scrollprogress.style.display="none"
+    }
+    scrollprogress.addEventListener("click",()=>{
+        document.documentElement.scrollTop=0
+    })
+    scrollprogress.style.background=`conic-gradient(rgba(58, 43, 224, 0.428)${scrollValue}%,#d7d7d7 ${scrollValue}%)`
+}
+
+window.onscroll=calcScrollValue
