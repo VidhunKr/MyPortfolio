@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortFolio Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+     <div class="container">
+        <nav>
+            <img src="./images/myLogo (1).png" alt="logo" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#service">Service</a></li>
+                <li><a href="#portfolio">PortFolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-circle-xmark" onclick="closemenu()" style="color: #fbf7f7;"></i>
+            </ul>
+            <i class="fa-solid fa-bars" id="menu" onclick="openmenu(),hidemenu()"  style="color: #fbf7f7;"></i>
+        </nav>
+        <!-- About -->
+        <div class="header-text">
+            <h2 class="hclass">Web Developer</h2>
+            <h1>Hi, I'm <span>Vidhun Krishna  M </span><br> Fullstack Developer</h1>
+        </div><br>
+        <a href="./images/VidhunKr (5).pdf" download class="btn2">Downlaod CV</a>
+     </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1"><img src="./images/pexels-szaboviktor-3228418.jpg" alt=""></div>
+                <div class="about-col-2"><h1 class="sub-title">About Me</h1>
+                    <p class="about-p">Mean Stack Developer expertise in crafting scalable and high-performance web applications. Proficient in Angular, Node.js, Express.js, and MongoDB. Passionate about delivering exceptional user experiences through clean code, responsive design, and agile development methodologies.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('projects')">Projects</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><i class="fa-brands fa-angular"></i> Agular</li>
+                        <li><i class="fa-brands fa-node"></i>Nodejs,Express</li>
+                        <li><i class="fa-brands fa-html5"></i> Html,CSS</li>
+                        <li><i class="fa-brands fa-js"></i> JavaScript</li>
+                        <li><i class="fa-solid fa-database"></i> MongoDb</li>
+                        <li></li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="projects">
+                    <ul>
+                        <li><span>Movie Rated Application</span><br> JavaScript, CSS, HTML</li>
+                        <li><span>Weather Application</span><br> Angular, NodeJs</li>
+                        <li><span>Blog Application</span><br>Express, JavaScript, MongoDb</li>
+                    </ul>
+                </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- --service---- -->
+
+    <div id="service">
+        <div class="container">
+            <h1 class="sub-title">My Service</h1>
+            <div class="service-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Developer</h2><br>
+                    <p><h3>Front-end Development:</h3> Focus on the user interface (UI) and user experience (UX) of a website. They use HTML, CSS, and JavaScript to create the visual elements and interactive features that users see and interact with.</p> 
+                    <br><p><h3>Back-end Development:</h3> Work on the server-side of a website. They handle the logic, database interactions, and server-side functionality. Languages like JavaScript and Node.js.</p>
+                     <br><p><h3>Full-stack Developer:</h3> Possess a strong understanding of both front-end and back-end development. They can work on all aspects of a web application.</p>          
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2> Web Desiging</h2><br>
+                    <p><h3>User Experience (UX) Design:</h3> Focuses on creating intuitive and enjoyable user interactions. </p>
+                    <br><p><h3>User Interface (UI) Design:</h3> Deals with the visual elements of the website, like layout, typography, and color schemes.</p>
+                    <br> <p><h3>Information Architecture:</h3> Organizes website content in a logical and accessible manner.</p>
+                    <br><p><h3>Visual Design: </h3>Creates the aesthetic appeal of the website, including graphics, images, and typography.</p>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----portfolio------ -->
+
+    <div id="portfolio">
+        <div class="container">
+            <div class="sub-title">My Work</div>
+            <div class="work-list">
+                <div class="work">
+                    <img src="./images/pexels-cottonbro-3945317.jpg" alt="">
+                    <div class="layer">
+                        <h3>Movie Rated Application</h3><br>
+                        <!-- <h5>Using JavaScript, CSS, HTML</h5>
+                       <p>Creating a movie application with an API involves two aspects: the API itself and the application frontend.</p>   -->
+                    <a href="https://github.com/VidhunKr/MovieRatedApplication"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./images/pexels-pixabay-459451.jpg" alt="">
+                    <div class="layer">
+                        <h3>Weather Application</h3><br>
+                        <!-- <h5>Using Angular, Nodejs, CSS</h5>
+                        <p>The Application made using openweather API in javaScript.</p> -->
+                            <a href="https://github.com/VidhunKr/WeatherApplication"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                </div>
+                <div class="work">
+                    <img src="./images/pexels-picography-4458.jpg" alt="">
+                    <div class="layer">
+                        <h3>Blog Application</h3><br>
+                        <!-- <h5>Using Nodejs, Express, MongoDb</h5>
+                        <p>The application with two set of users: bloggers and readers.</p> -->
+                           <a href="https://github.com/VidhunKr/Blog-Application"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                </div>
+            </div>
+            <a href="https://github.com/VidhunKr/" class="btn">See More</a>
+        </div>
+    </div>
+
+    <!-- ------Contact------ -->
+     <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> Vidhunkrishna007@gmail.com</p>
+                    <p><i class="fa-solid fa-phone-volume"></i> +91 7012305384</p>
+                    <p><i class="fa-solid fa-location-dot"></i>Palakkad, Kerala 678012</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/VidhunKr/"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="name" placeholder="Enter your name" required>
+                        <input type="email" name="email" placeholder="your@gmail.com" required>
+                        <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn3">Submit</button>
+                    </form><br>
+                <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © VidhunKr. All rights reserved.</p>
+        </div>
+     </div>
+    <script src="./script.js"></script>
+</body>
+</html>
