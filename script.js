@@ -46,7 +46,7 @@ let calcScrollValue = ()=>{
     let scrollprogress=document.getElementById("progress")
     let progressValue= document.getElementById("progress-value")
     let pos = document.documentElement.scrollTop
-    let calcHeight=document.documentElement.scrollHeight -
+    let calcHeight=document.documentElement.scrollHeight-
     document.documentElement.clientHeight
     let scrollValue= Math.round((pos *100)/ calcHeight)
     if(pos>100){
@@ -57,7 +57,8 @@ let calcScrollValue = ()=>{
     scrollprogress.addEventListener("click",()=>{
         document.documentElement.scrollTop=0
     })
-    scrollprogress.style.background=`conic-gradient(rgba(58, 43, 224, 0.428)${scrollValue}%,#d7d7d7 ${scrollValue}%)`
+    scrollprogress.style.background=`conic-gradient(rgba(58, 43, 224, 0.428) ${scrollValue}%,#d7d7d7 ${scrollValue})`
 }
 
 window.onscroll=calcScrollValue
+window.onload=calcScrollValue
