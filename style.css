@@ -396,14 +396,13 @@ nav .fa-solid{
     }nav ul{
         
         background: rgba(35, 41, 41, 0.559);
-        position: absolute;
+        position: fixed;
         top: 0;
         right: -200px;
         width: 200px;
         padding-top: 50px;
         z-index: 2;
         border-radius: 15px;
-        overflow: hidden;
         transition: right 0.5s;
     }
     nav ul li{
