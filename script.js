@@ -42,23 +42,35 @@ function closemenu(){
   })
 
 //   --------TopButton-----
-let calcScrollValue = ()=>{
-    let scrollprogress=document.getElementById("progress")
-    let progressValue= document.getElementById("progress-value")
-    let pos = document.documentElement.scrollTop
-    let calcHeight=document.documentElement.scrollHeight-
-    document.documentElement.clientHeight
-    let scrollValue= Math.round((pos *100)/ calcHeight)
-    if(pos>100){
-        scrollprogress.style.display="grid"
-    }else{
-        scrollprogress.style.display="none"
-    }
-    scrollprogress.addEventListener("click",()=>{
-        document.documentElement.scrollTop=0
-    })
-    scrollprogress.style.background=`conic-gradient(rgba(58, 43, 224, 0.428) ${scrollValue}%,#d7d7d7 ${scrollValue})`
-}
+let calcScrollValue = () => {
+    let scrollprogress = document.getElementById("progress");
+    
+    if (!scrollprogress) return; // Prevent errors if the element is missing
+    
+    let pos = document.documentElement.scrollTop;
+    let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrollValue = Math.round((pos * 100) / calcHeight);
 
-window.onscroll=calcScrollValue
-window.onload=calcScrollValue
+    if (pos > 100) {
+        scrollprogress.style.display = "grid";
+    } else {
+        scrollprogress.style.display = "none";
+    }
+
+    scrollprogress.style.background = `conic-gradient(rgba(0, 0, 0, 0.48) ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
+};
+
+// Attach scroll event
+window.onscroll = calcScrollValue;
+window.onload = calcScrollValue;
+
+// Add event listener only once
+document.addEventListener("DOMContentLoaded", () => {
+    let scrollprogress = document.getElementById("progress");
+    if (scrollprogress) {
+        scrollprogress.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    }
+});
+
